@@ -1,0 +1,172 @@
+/* header */
+header {
+    width: 100%; position: fixed;
+    top: 50px; z-index: 9999;
+    display: flex; justify-content: space-between;
+    padding: 0 100px;
+}
+header nav {}
+header nav a {
+    color: #fff; transition: 0.5s;
+    margin-right: 20px;
+}
+header nav a:hover {
+    color: #333;
+}
+header h1 {color: #fff;}
+
+/* main */
+main {}
+main .section {
+    width: 100vw; height: 100vh;
+}
+main .main {
+    background-image: url(../images/main_background.avif);
+    background-size: cover;
+}
+main .main .introduce {}
+main .main .introduce h2 {
+    text-align: center; margin-bottom: 60px;
+    color: #f5f5f5; font-size: 3rem;
+    font-weight: 700; opacity: 0;
+}
+main .main .introduce p {
+    opacity: 0; margin-bottom: 20px;
+    color: #ccc; text-align: center;
+}
+main .main #mouse {
+    position: fixed; bottom: 50px; left: 50%;
+    z-index: 9999;
+    transform: translateX(-50%);
+    animation: mouse 1.5s ease-in-out infinite;
+}
+main .main #mouse img {
+    width: 100%;
+}
+/* about */
+main .about {
+    background-color: #000;
+}
+main .about .photo {}
+main .about .photo h2 {
+    color: #fff; font-size: 3rem;
+    font-weight: 700;
+}
+main .about .photo h2 span {
+    font-family: "Dancing Script", cursive;
+    color: #fff; font-weight: 700;
+    font-size: 4rem; margin-left: 10px;
+}
+main .about .photo p {
+    width: 200px; border-radius: 10px;
+    border: 3px solid #fff;
+}
+main .about .photo p img {
+    width: 100%; border-radius: 10px;
+}
+main .about .info {}
+main .about .info h3 {
+    color: #fff; font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+}
+main .about .info p {
+    color: #fff;
+}
+main .about .info p a {
+    color: #ccc; transition: 0.5s;
+}
+main .about .info p a:hover {
+    color: #333;
+}
+main .about .career {}
+main .about .career h3 {
+    color: #fff; font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+}
+main .about .career p {
+    color: #fff;
+}
+/* skill */
+main .skill {
+    background: #000;
+    padding-left: 200px;
+}
+main .skill h2 {
+    color: #fff; font-size: 3rem;
+    font-weight: 700; margin-bottom: 40px;
+}
+main .skill #swiper_skill {
+    overflow: hidden;
+}
+main .skill #swiper_skill #skill_wrap {}
+main .skill #swiper_skill #skill_wrap a {
+    height: 300px; position: relative;
+    background: #fff; border-radius: 10px;
+    display: flex; justify-content: center;
+    align-items: center;
+}
+main .skill #swiper_skill #skill_wrap a img {
+    width: 200px;
+}
+main .skill #swiper_skill #skill_wrap a .skill_info {
+    width: 100%; height: 100%; position: absolute;
+    background: rgba(0, 0, 0, 0.8); top: 0;
+    opacity: 0; transition: 0.5s;
+}
+main .skill #swiper_skill #skill_wrap a:hover .skill_info {
+    opacity: 1;
+}
+main .skill #swiper_skill #skill_wrap a .skill_info p {
+    color: #aaa; font-size: 1.5rem;
+    text-align: center;
+}
+/* project */
+main .project {
+    background-image: url(../images/gymshark.avif);
+    background-size: cover; transition: 0.5s;
+}
+main .project .portfolio {
+    display: flex;
+}
+main .project .portfolio a {
+    width: 25%; height: 100vh;
+    border-right: 1px solid #444;
+    transition: 0.5s; display: flex; flex-flow: column nowrap;
+    justify-content: center; align-items: center;
+}
+main .project .portfolio a:last-child {
+    border: none;
+}
+main .project .portfolio a p {display: none;}
+main .project .portfolio a p img {}
+main .project .portfolio a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+main .project .portfolio a:hover h2 {
+    transform: translateY(-20px);
+}
+main .project .portfolio a:hover p {display: block;}
+main .project .portfolio a h2 {
+    color: #fff; font-size: 2rem;
+    font-weight: 700;
+}
+main .contact {
+    background: #000;
+}
+main .contact h2 {
+    color: #fff; font-size: 3rem;
+    font-weight: 700;
+}
+
+/* 모션 */
+.wide {animation: wide 5s ease;}
+@keyframes wide {
+    0% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+/* 마우스 모션 */
+@keyframes mouse {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+}

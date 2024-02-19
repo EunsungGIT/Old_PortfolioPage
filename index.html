@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="2024년 프론트엔드 신입 김은성">
+    <meta name="keywords" content="프론트엔드, frontend, html, css, javascript, react">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김은성 포트폴리오</title>
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/jquery.fullPage.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skill</a>
+            <a href="#">Project</a>
+            <a href="#">Contact</a>
+        </nav>
+        <h1>PORTFOLIO</h1>
+    </header>
+    <main>
+        <div class="section main wide">
+            <div class="introduce">
+                <h2>"유능한 프론트엔드 웹 개발자를 목적지로 둔 김은성입니다."</h2>
+                <p class="first">수많은 기술을 토대로 문제점을 해결하고 벽돌을 쌓아나가는 과정이 뿌듯하고 재밌습니다.</p>
+                <p class="second">'끊임없이 팽창하는 우주' 와 같은 끊임없이 탐구하고 공부하고</p>
+                <p class="third">'잔잔한 우주 속에서 모든 것을 빨아드리는 블랙홀' 처럼 고객의 니즈를 확실하게 흡수해 해결책을 제시하는 훌륭한 개발자가 될 것 입니다.</p>
+            </div>
+            <button type="button" id="mouse"><img src="./images/mouse.png" alt="마우스"></button>
+        </div>
+        <div class="section about">
+            <div class="photo">
+                <h2>ABOUT<span>ME</span></h2>
+                <p><img src="./images/photo.avif" alt="프로필"></p>
+            </div>
+            <div class="info">
+                <h3>INFO</h3>
+                <p>생년월일 : 00.10.19</p>
+                <p>이메일 : <a href="#">spacerdt@gmail.com</a></p>
+                <p>전화번호 : 010 - 4098 - 9161</p>
+                <p>주소 : 인천광역시 부평구</p>
+                <p>MBTI : INFJ</p>
+            </div>
+            <div class="career">
+                <h3>CAREER</h3>
+                <p>2019.07.27 ~ 2022.05.31 비티엘정보통신 - 네트워크 장비 구축 및 유지 보수</p>
+                <p>2022.11.01 ~ 2023.10.01 킹휘트니스 - PT 및 회원 관리</p>
+                <p>2023.10.30 ~ 2024.03.12 그린 컴퓨터 아카데미 - 프론트엔드 개발자 양성 과정 수료</p>
+            </div>
+        </div>
+        <div class="section skill">
+            <h2>SKILL</h2>
+            <div class="swiper-container" id="swiper_skill">
+                <div class="swiper-wrapper" id="skill_wrap">
+                    <a href="#" class="swiper-slide" id="skill_001">
+                        <img src="./images/skill_icon/html_2.png" alt="HTML5">
+                        <div class="skill_info">
+                            <p>HTML입니다</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide" id="skill_001">
+                        <img src="./images/skill_icon/css2.png" alt="CSS3">
+                        <div class="skill_info">
+                            <p>HTML입니다</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide" id="skill_001">
+                        <img src="./images/skill_icon/js1.jpg" alt="JS">
+                        <div class="skill_info">
+                            <p>HTML입니다</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide" id="skill_001">
+                        <img src="./images/skill_icon/html_2.png" alt="HTML5">
+                        <div class="skill_info">
+                            <p>HTML입니다</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide" id="skill_001">
+                        <img src="./images/skill_icon/css2.png" alt="CSS3">
+                        <div class="skill_info">
+                            <p>HTML입니다</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide" id="skill_001">
+                        <img src="./images/skill_icon/js1.jpg" alt="JS">
+                        <div class="skill_info">
+                            <p>HTML입니다</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section project">
+            <div class="portfolio">
+                <a href="#">
+                    <h2>GYMSHARK</h2>
+                    <p><img src="./images/gymshark_logo.png" alt="GYMSHARK"></p>
+                    <p>개인 클론 코딩 포트폴리오</p>
+                </a>
+                <a href="#">
+                    <h2>Wavve</h2>
+                    <p><img src="./images/wavve_logo.svg" alt="Wavve"></p>
+                    <p>팀 작업</p>
+                </a>
+                <a href="#">
+                    <h2>작업중</h2>
+                </a>
+                <a href="#">
+                    <h2>작업중</h2>
+                </a>
+            </div>
+        </div>
+        <div class="section contact">
+            <h2>CONTACT</h2>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./script/jquery.fullPage.js"></script>
+    <script src="./script/index.js"></script>
+</body>
+</html>
