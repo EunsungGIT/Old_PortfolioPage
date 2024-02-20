@@ -21,8 +21,9 @@ main .section {
     width: 100vw; height: 100vh;
 }
 main .main {
-    background-image: url(../images/main_background.avif);
+    background-image: url(../images/main_background_002.avif);
     background-size: cover;
+    background-position: center;
 }
 main .main .introduce {}
 main .main .introduce h2 {
