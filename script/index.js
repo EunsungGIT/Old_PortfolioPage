@@ -54,11 +54,15 @@ let swiper = new Swiper('#swiper_skill',{
     loop:true,
     slidesPerView:3,
     spaceBetween:40,
+    pagination:{
+        el:'.swiper-pagination'
+    }
 })
 
 /* project */
 const portfolio = document.querySelectorAll('.portfolio a')
 const project = document.querySelector('.project')
+const video = document.querySelectorAll('.video')
 
 portfolio[0].addEventListener('mouseenter',()=>{
     project.style.backgroundImage = 'url(../images/gymshark.avif)'
@@ -71,4 +75,15 @@ portfolio[2].addEventListener('mouseenter',()=>{
 })
 portfolio[3].addEventListener('mouseenter',()=>{
     project.style.backgroundImage = 'url(../images/none.avif)'
+})
+
+portfolio.forEach((t,i)=>{
+    t.addEventListener('mouseenter',()=>{
+        setTimeout(() => {
+            video[i].style.display = 'block';
+        }, 1000);
+    })
+    t.addEventListener('mouseleave',()=>{
+        video[i].style.display = 'none';
+    })
 })

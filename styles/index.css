@@ -21,7 +21,7 @@ main .section {
     width: 100vw; height: 100vh;
 }
 main .main {
-    background-image: url(../images/main_background_002.avif);
+    background-image: url(../images/main_background_002.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -47,45 +47,54 @@ main .main #mouse img {
 /* about */
 main .about {
     background-color: #000;
+    padding: 0 200px;
 }
-main .about .photo {}
-main .about .photo h2 {
+main .about .about_wrap {
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+main .about .about_wrap .photo {
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+}
+main .about .about_wrap .photo h2 {
     color: #fff; font-size: 3rem;
-    font-weight: 700;
+    font-weight: 700; margin-bottom: 20px;
 }
-main .about .photo h2 span {
+main .about .about_wrap .photo h2 span {
     font-family: "Dancing Script", cursive;
     color: #fff; font-weight: 700;
     font-size: 4rem; margin-left: 10px;
 }
-main .about .photo p {
+main .about .about_wrap .photo p {
     width: 200px; border-radius: 10px;
     border: 3px solid #fff;
+    animation: mouse 1.5s ease-in-out infinite;
 }
-main .about .photo p img {
+main .about .about_wrap .photo p img {
     width: 100%; border-radius: 10px;
 }
-main .about .info {}
-main .about .info h3 {
+main .about .about_wrap .info {}
+main .about .about_wrap .info h3 {
     color: #fff; font-family: "Dancing Script", cursive;
-    font-size: 2rem;
+    font-size: 2rem; margin-bottom: 10px;
 }
-main .about .info p {
-    color: #fff;
+main .about .about_wrap .info p {
+    color: #fff; margin-bottom: 5px;
 }
-main .about .info p a {
+main .about .about_wrap .info p a {
     color: #ccc; transition: 0.5s;
 }
-main .about .info p a:hover {
+main .about .about_wrap .info p a:hover {
     color: #333;
 }
-main .about .career {}
-main .about .career h3 {
+main .about .about_wrap .career {}
+main .about .about_wrap .career h3 {
     color: #fff; font-family: "Dancing Script", cursive;
-    font-size: 2rem;
+    font-size: 2rem; margin-bottom: 10px;
 }
-main .about .career p {
-    color: #fff;
+main .about .about_wrap .career p {
+    color: #fff; margin-bottom: 5px;
 }
 /* skill */
 main .skill {
@@ -99,7 +108,9 @@ main .skill h2 {
 main .skill #swiper_skill {
     overflow: hidden;
 }
-main .skill #swiper_skill #skill_wrap {}
+main .skill #swiper_skill #skill_wrap {
+    position: relative;
+}
 main .skill #swiper_skill #skill_wrap a {
     height: 300px; position: relative;
     background: #fff; border-radius: 10px;
@@ -121,11 +132,35 @@ main .skill #swiper_skill #skill_wrap a .skill_info p {
     color: #aaa; font-size: 1.5rem;
     text-align: center;
 }
+main .skill #swiper_skill #skill_wrap .swiper-pagination-bullet {
+    background:#fff; opacity:0.9;
+    width: 50px; height: 5px; border-radius: 0;
+    position: absolute; bottom: 0; right: 0;
+}
+.swiper-container .swiper-pagination-bullet-active {
+    background-color:red;
+}
 /* project */
 main .project {
     background-image: url(../images/gymshark.avif);
     background-size: cover; transition: 0.5s;
+    position: relative;
 }
+main .project .portfolio_popup_bg {
+    width: 100%; height: 100%;
+    position: absolute; top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; justify-content: center;
+    align-items: center;
+}
+main .project .portfolio_popup_bg .portfolio_popup {
+    width: 500px; height: 300px;
+    background: #fff; border-radius: 10px;
+}
+main .project .portfolio_popup video {
+    width: 300px; height: 150px;
+}
+main .project .portfolio_popup p {}
 main .project .portfolio {
     display: flex;
 }
@@ -144,14 +179,11 @@ main .project .portfolio a:hover {
     background: rgba(0, 0, 0, 0.5);
     transition: 0.5s;
 }
-main .project .portfolio a:hover h2 {
-    transform: translateY(-20px);
-}
-main .project .portfolio a:hover p {display: block;}
 main .project .portfolio a h2 {
     color: #fff; font-size: 2rem;
     font-weight: 700;
 }
+/* contact */
 main .contact {
     background: #000;
 }
