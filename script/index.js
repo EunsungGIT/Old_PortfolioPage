@@ -5,8 +5,27 @@ $('main').fullpage({
     menu: 'nav',
     navigation: true,
     slidesNavigation: true,
-    loopBottom: true,
-    loopTop: true,
+    afterLoad:function(anchor, index){
+        if(anchor == 'about'){//앵커의 위치가 b와 같으면
+            if (anchor == 'about') { // 앵커의 위치가 about일 때
+                $('.about_wrap .photo').animate({
+                    opacity: 1
+                }, 1000);
+                $('.about_wrap .info').delay(500).animate({
+                    opacity: 1,
+                    top:60,
+                }, 1000);
+                $('.about_wrap .career').delay(1000).animate({
+                    opacity: 1,
+                    top:60,
+                }, 1000);
+                $('.about_wrap .github').delay(1500).animate({
+                    opacity: 1,
+                    top:60,
+                }, 1000);
+            }
+        }
+    }
 })
 
 /* header */
@@ -56,12 +75,13 @@ mouseBtn.addEventListener('click',()=>{
 
 /* skill */
 let swiper = new Swiper('#swiper_skill',{
-    autoplay:{delay:0,},
+    autoplay:{delay:1000,},
     loop:true,
     slidesPerView:4,
-    spaceBetween:40,
-    pagination:{
-        el:'.swiper-pagination'
+    spaceBetween:20,
+    navigation:{
+        nextEl:'#skill_prev',
+        prevEl:'#skill_next'
     }
 })
 

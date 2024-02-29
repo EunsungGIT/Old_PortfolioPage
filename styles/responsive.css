@@ -1,0 +1,9 @@
+@media screen and (max-width:1024px){
+    main .project .portfolio {
+        flex-flow: column nowrap;
+    }
+    main .project .portfolio a {
+        width: 100%; height: 20%;
+        border-bottom: 1px solid #aaa;
+    }
+}
