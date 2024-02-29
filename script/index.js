@@ -1,6 +1,12 @@
 /* fullpage */
 $('main').fullpage({
     scrollingSpeed:1500,
+    anchors: ['home', 'about', 'skill', 'project', 'contact'],
+    menu: 'nav',
+    navigation: true,
+    slidesNavigation: true,
+    loopBottom: true,
+    loopTop: true,
 })
 
 /* header */
@@ -14,28 +20,28 @@ nav_a.forEach((link, index) => {
 
 /* main */
 gsap.to('.introduce h2',{
-    scrollTirgger:'.main',
+    scrollTrigger:'.main',
     opacity:1,
     duration:1,
     y:-20,
     delay:1,
 })
 gsap.to('.introduce .first',{
-    scrollTirgger:'.main',
+    scrollTrigger:'.main',
     opacity:1,
     duration:1,
     y:-20,
     delay:2,
 })
 gsap.to('.introduce .second',{
-    scrollTirgger:'.main',
+    scrollTrigger:'.main',
     opacity:1,
     duration:1,
     y:-20,
     delay:3,
 })
 gsap.to('.introduce .third',{
-    scrollTirgger:'.main',
+    scrollTrigger:'.main',
     opacity:1,
     duration:1,
     y:-20,
@@ -50,9 +56,9 @@ mouseBtn.addEventListener('click',()=>{
 
 /* skill */
 let swiper = new Swiper('#swiper_skill',{
-    autoplay:{delay:3000,},
+    autoplay:{delay:0,},
     loop:true,
-    slidesPerView:3,
+    slidesPerView:4,
     spaceBetween:40,
     pagination:{
         el:'.swiper-pagination'
@@ -62,7 +68,10 @@ let swiper = new Swiper('#swiper_skill',{
 /* project */
 const portfolio = document.querySelectorAll('.portfolio a')
 const project = document.querySelector('.project')
-const video = document.querySelectorAll('.video')
+const portfolio_popup_bg = document.querySelectorAll('.portfolio_popup_bg')
+const closeBtn = document.querySelectorAll('#closeBtn')
+const info = document.querySelectorAll('.portfolio .info')
+const portfolio_h2 = document.querySelectorAll('.portfolio h2')
 
 portfolio[0].addEventListener('mouseenter',()=>{
     project.style.backgroundImage = 'url(../images/gymshark.avif)'
@@ -78,12 +87,27 @@ portfolio[3].addEventListener('mouseenter',()=>{
 })
 
 portfolio.forEach((t,i)=>{
+    info[i].style.opacity = '0'
+    portfolio_popup_bg[i].style.opacity = '0'
+    portfolio_popup_bg[i].style.display = 'none'
     t.addEventListener('mouseenter',()=>{
-        setTimeout(() => {
-            video[i].style.display = 'block';
-        }, 1000);
+        portfolio_h2[i].style.transform = 'translateY(-20px)'
+        info[i].classList.add('show')
+        info[i].classList.remove('hide')
     })
     t.addEventListener('mouseleave',()=>{
-        video[i].style.display = 'none';
+        portfolio_h2[i].style.transform = 'translateY(0)'
+        info[i].classList.add('hide')
+        info[i].classList.remove('show')
     })
+    t.addEventListener('click',()=>{
+        portfolio_popup_bg[i].style.opacity = '1'
+        portfolio_popup_bg[i].style.display = 'flex'
+    })
+    closeBtn[i].addEventListener('click', () => {
+        portfolio_popup_bg[i].style.opacity = '0';
+        setTimeout(() => {
+            portfolio_popup_bg[i].style.display = 'none';
+        }, 1000);
+    });
 })

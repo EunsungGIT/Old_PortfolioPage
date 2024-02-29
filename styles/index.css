@@ -11,7 +11,7 @@ header nav a {
     margin-right: 20px;
 }
 header nav a:hover {
-    color: #333;
+    color: #aaa;
 }
 header h1 {color: #fff;}
 
@@ -51,15 +51,15 @@ main .about {
 }
 main .about .about_wrap {
     display: flex; justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; flex-flow: column nowrap;
 }
 main .about .about_wrap .photo {
-    display: flex; flex-flow: column nowrap;
-    align-items: center;
+    display: flex; align-items: flex-end;
+    margin-bottom: 80px;
 }
 main .about .about_wrap .photo h2 {
     color: #fff; font-size: 3rem;
-    font-weight: 700; margin-bottom: 20px;
+    font-weight: 700; margin-right: 40px;
 }
 main .about .about_wrap .photo h2 span {
     font-family: "Dancing Script", cursive;
@@ -67,34 +67,75 @@ main .about .about_wrap .photo h2 span {
     font-size: 4rem; margin-left: 10px;
 }
 main .about .about_wrap .photo p {
-    width: 200px; border-radius: 10px;
+    width: 100px; border-radius: 10px;
     border: 3px solid #fff;
     animation: mouse 1.5s ease-in-out infinite;
 }
 main .about .about_wrap .photo p img {
     width: 100%; border-radius: 10px;
 }
-main .about .about_wrap .info {}
-main .about .about_wrap .info h3 {
+main .about .about_wrap .about_bottom {
+    display: flex;
+}
+main .about .about_wrap .about_bottom .info {
+    padding: 20px; border-top: 1px solid #fff;
+    position: relative;
+}
+main .about .about_wrap .about_bottom .info:before {
+    content: ''; display: inline-block;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #fff; position: absolute; top: -5px;
+    left: 0;
+}
+main .about .about_wrap .about_bottom .info h3 {
     color: #fff; font-family: "Dancing Script", cursive;
     font-size: 2rem; margin-bottom: 10px;
 }
-main .about .about_wrap .info p {
+main .about .about_wrap .about_bottom .info p {
     color: #fff; margin-bottom: 5px;
 }
-main .about .about_wrap .info p a {
+main .about .about_wrap .about_bottom .info p a {
     color: #ccc; transition: 0.5s;
 }
-main .about .about_wrap .info p a:hover {
+main .about .about_wrap .about_bottom .info p a:hover {
     color: #333;
 }
-main .about .about_wrap .career {}
-main .about .about_wrap .career h3 {
+main .about .about_wrap .about_bottom .career {
+    padding: 20px; border-top: 1px solid #fff;
+    position: relative;
+}
+main .about .about_wrap .about_bottom .career::before {
+    content: ''; display: inline-block;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #fff; position: absolute; top: -5px;
+    left: 0;
+}
+main .about .about_wrap .about_bottom .career h3 {
     color: #fff; font-family: "Dancing Script", cursive;
     font-size: 2rem; margin-bottom: 10px;
 }
-main .about .about_wrap .career p {
+main .about .about_wrap .about_bottom .career p {
     color: #fff; margin-bottom: 5px;
+}
+main .about .about_wrap .about_bottom .github {
+    padding: 20px; border-top: 1px solid #fff;
+    position: relative;
+}
+main .about .about_wrap .about_bottom .github::before {
+    content: ''; display: inline-block;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #fff; position: absolute; top: -5px;
+    left: 0;
+}
+main .about .about_wrap .about_bottom .github h3 {
+    color: #fff; font-family: "Dancing Script", cursive;
+    font-size: 2rem; margin-bottom: 10px;
+}
+main .about .about_wrap .about_bottom .github a {
+    color: #ccc; transition: 0.5s;
+}
+main .about .about_wrap .about_bottom .github a:hover {
+    color: #333;
 }
 /* skill */
 main .skill {
@@ -110,35 +151,32 @@ main .skill #swiper_skill {
 }
 main .skill #swiper_skill #skill_wrap {
     position: relative;
+    display: flex; justify-content: space-between;
 }
 main .skill #swiper_skill #skill_wrap a {
-    height: 300px; position: relative;
-    background: #fff; border-radius: 10px;
-    display: flex; justify-content: center;
-    align-items: center;
+    height: 200px; position: relative;
+    border: 1px solid #aaa; border-radius: 10px;
+    display: flex; justify-content: space-between;
+    align-items: center; padding: 0 50px;
+}
+main .skill #swiper_skill #skill_wrap .skill_icon {
+    width: 150px; border: 1px solid #aaa;
+    padding: 10px; border-radius: 10px;
+    background: #fff;
 }
 main .skill #swiper_skill #skill_wrap a img {
-    width: 200px;
+    width: 100%;
 }
 main .skill #swiper_skill #skill_wrap a .skill_info {
-    width: 100%; height: 100%; position: absolute;
-    background: rgba(0, 0, 0, 0.8); top: 0;
-    opacity: 0; transition: 0.5s;
+
 }
-main .skill #swiper_skill #skill_wrap a:hover .skill_info {
-    opacity: 1;
-}
-main .skill #swiper_skill #skill_wrap a .skill_info p {
-    color: #aaa; font-size: 1.5rem;
+main .skill #swiper_skill #skill_wrap a .skill_info h3 {
+    color: #aaa;
     text-align: center;
 }
-main .skill #swiper_skill #skill_wrap .swiper-pagination-bullet {
-    background:#fff; opacity:0.9;
-    width: 50px; height: 5px; border-radius: 0;
-    position: absolute; bottom: 0; right: 0;
-}
-.swiper-container .swiper-pagination-bullet-active {
-    background-color:red;
+main .skill #swiper_skill #skill_wrap a .skill_info p {
+    color: #aaa; font-size: 0.875rem;
+    text-align: center;
 }
 /* project */
 main .project {
@@ -151,45 +189,119 @@ main .project .portfolio_popup_bg {
     position: absolute; top: 0;
     background: rgba(0, 0, 0, 0.5);
     display: flex; justify-content: center;
-    align-items: center;
+    transition: opacity 1s;
+    align-items: center; z-index: 9999;
 }
 main .project .portfolio_popup_bg .portfolio_popup {
-    width: 500px; height: 300px;
-    background: #fff; border-radius: 10px;
+    width: 1000px; position: relative;
+    display: flex; align-items: center;
+    flex-flow: column nowrap;
 }
-main .project .portfolio_popup video {
-    width: 300px; height: 150px;
+main .project .portfolio_popup_bg .portfolio_popup video {
+    width: 100%; border-radius: 10px;
 }
-main .project .portfolio_popup p {}
+main .project .portfolio_popup_bg .portfolio_popup p {
+    color: #fff;
+}
+main .project .portfolio_popup_bg .portfolio_popup #planBtn,
+main .project .portfolio_popup_bg .portfolio_popup #enterBtn {
+    border-radius: 50px; padding: 10px 20px;
+    color: #fff; width: 100%; margin: 5px 0;
+    transition: 0.5s;
+}
+main .project .portfolio_popup_bg .portfolio_popup #planBtn:hover {
+    color: #aaa;
+}
+main .project .portfolio_popup_bg .portfolio_popup #enterBtn:hover {
+    color: #aaa;
+}
+main .project .portfolio_popup_bg .portfolio_popup #closeBtn {
+    width: 36px; transition: 0.5s;
+    position: absolute; top: 0; right: -50px;
+}
+main .project .portfolio_popup_bg .portfolio_popup #closeBtn:hover {
+    filter: brightness(50%);
+}
+main .project .portfolio_popup_bg .portfolio_popup #closeBtn img {
+    width: 100%;
+}
 main .project .portfolio {
     display: flex;
 }
 main .project .portfolio a {
-    width: 25%; height: 100vh;
-    border-right: 1px solid #444;
+    width: 25%; height: 100vh; padding: 0 20px;
+    border-right: 1px solid #aaa;
     transition: 0.5s; display: flex; flex-flow: column nowrap;
     justify-content: center; align-items: center;
 }
-main .project .portfolio a:last-child {
-    border: none;
-}
-main .project .portfolio a p {display: none;}
-main .project .portfolio a p img {}
 main .project .portfolio a:hover {
     background: rgba(0, 0, 0, 0.5);
     transition: 0.5s;
 }
+main .project .portfolio a:last-child {
+    border: none;
+}
 main .project .portfolio a h2 {
     color: #fff; font-size: 2rem;
-    font-weight: 700;
+    font-weight: 700; transition: 1s;
+    margin-top: 80px;
+}
+main .project .portfolio a h2 img {
+    width: 100%;
+}
+main .project .portfolio a .info {}
+main .project .portfolio a .info > p {
+    text-align: center; color: #fff;
+    margin-top: 20px;
+}
+main .project .portfolio a .info .tool {
+    display: flex; flex-flow: row wrap;
+    justify-content: center; margin-top: 20px;
+}
+main .project .portfolio a .info .tool p {
+    background: rgba(0, 0, 0, 0.5); color: #fff;
+    border-radius: 50px; padding: 5px 15px;
+    margin: 5px;
 }
 /* contact */
 main .contact {
     background: #000;
+    padding: 0 200px;
 }
 main .contact h2 {
     color: #fff; font-size: 3rem;
     font-weight: 700;
+}
+main .contact #emailFrm {
+    display: flex; flex-flow: column nowrap;
+}
+main .contact #emailFrm #textInput {
+    border: 1px solid #aaa; height: 50px;
+    color: #aaa; margin-bottom: 10px;
+    border-radius: 10px; width: 50%;
+    padding: 0 20px;
+}
+main .contact #emailFrm #emailInput {
+    border: 1px solid #aaa; height: 50px;
+    color: #aaa; margin-bottom: 10px;
+    border-radius: 10px; width: 50%;
+    padding: 0 20px;
+}
+main .contact #emailFrm #textMessage {
+    background: none; height: 200px;
+    color: #aaa; margin-bottom: 10px;
+    border-radius: 10px; padding: 20px;
+    width: 70%; border: 1px solid #aaa;
+}
+main .contact #emailFrm .h-captcha {
+    margin-bottom: 10px;
+}
+main .contact #emailFrm #submitBtn {
+    color: #fff; width: max-content;
+    transition: 0.5s;
+}
+main .contact #emailFrm #submitBtn:hover {
+    color: #aaa;
 }
 
 /* 모션 */
@@ -197,6 +309,17 @@ main .contact h2 {
 @keyframes wide {
     0% {transform: scale(1.1);}
     100% {transform: scale(1);}
+}
+/* 모션 2 */
+.hide {animation: hide 1s both;}
+.show {animation: show 1s both;}
+@keyframes hide {
+    0% {opacity: 1; transform: translateY(20px);}
+    100% {opacity: 0; transform: translateY(0);}
+}
+@keyframes show {
+    0% {opacity: 0; transform: translateY(0);}
+    100% {opacity: 1; transform: translateY(20px);}
 }
 /* 마우스 모션 */
 @keyframes mouse {
