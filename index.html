@@ -5,7 +5,10 @@
     <meta name="description" content="2024년 프론트엔드 신입 김은성">
     <meta name="keywords" content="프론트엔드, frontend, html, css, javascript, react">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김은성 포트폴리오</title>
+    <title>EUNSUNG'S PORTFOLIO</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/FAVICON.png" type="image/x-icon">
+    <link rel="icon" href="./images/FAVICON.png" type="image/x-icon">
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- GSAP -->
@@ -16,14 +19,16 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/jquery.fullPage.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/responsive.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <nav>
             <a href="#">Home</a>
@@ -39,17 +44,18 @@
             <div class="introduce">
                 <h2>"유능한 프론트엔드 웹 개발자를 목적지로 둔 김은성입니다."</h2>
                 <p class="first">수많은 기술을 토대로 문제점을 해결하고 벽돌을 쌓아나가는 과정이 뿌듯하고 재밌습니다.</p>
-                <p class="second">'끊임없이 팽창하는 우주' 와 같은 끊임없이 탐구하고 공부하고</p>
+                <p class="second">'끊임없이 팽창하는 우주' 와 같은 끊임없이 지식이 넓히고</p>
                 <p class="third">'잔잔한 우주 속에서 모든 것을 빨아드리는 블랙홀' 처럼 고객의 니즈를 확실하게 흡수해 해결책을 제시하는 훌륭한 개발자가 될 것 입니다.</p>
             </div>
             <button type="button" id="mouse"><img src="./images/mouse.png" alt="마우스"></button>
         </div>
         <div class="section about">
             <div class="banner"></div>
+            <div class="planet"></div>
             <div class="about_wrap">
                 <div class="photo">
                     <h2>ABOUT<span>ME</span></h2>
-                    <p><img src="./images/photo.avif" alt="프로필"></p>
+                    <p><img src="./images/photo.png" alt="프로필"></p>
                 </div>
                 <div class="about_bottom">
                     <div class="info">
@@ -75,212 +81,305 @@
         </div>
         <div class="section skill">
             <h2>SKILL</h2>
-            <div class="swiper-container" id="swiper_skill">
-                <div class="swiper-wrapper" id="skill_wrap">
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
-                            <img src="./images/skill_icon/html_2.png" alt="HTML5">
+            <div class="swiper-container swiper_skill">
+                <div class="swiper-wrapper skill_wrap">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/html.png" alt="HTML5">
                         </div>
                         <div class="skill_info">
                             <h3>HTML5</h3>
-                            <p>홈페이지 구조 제작 가능</p>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
                         </div>
                     </a>
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
-                            <img src="./images/skill_icon/css2.png" alt="HTML5">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/css.png" alt="HTML5">
                         </div>
                         <div class="skill_info">
                             <h3>CSS3</h3>
-                            <p>홈페이지 구조 제작 가능</p>
+                            <p>CSS3 다양한 최신 트렌드디자인과 애니메이션을 구성하며 JAVASCRIPT와 연동할 수 있는 화려한 디자인을 제작할 수 있습니다.</p>
                         </div>
                     </a>
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
-                            <img src="./images/skill_icon/js1.jpg" alt="HTML5">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/javascript.png" alt="HTML5">
                         </div>
                         <div class="skill_info">
-                            <h3>CSS3</h3>
-                            <p>홈페이지 구조 제작 가능</p>
+                            <h3>Javascript</h3>
+                            <p>슬라이드, 메뉴, 스크롤 애니메이션 기능 등 최신 트렌드에 적용된 다양한 동적 기능을 자바스크립트로 구현 가능합니다.</p>
                         </div>
                     </a>
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
                             <img src="./images/skill_icon/react.svg" alt="HTML5">
                         </div>
                         <div class="skill_info">
                             <h3>React</h3>
-                            <p>리액트</p>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
                         </div>
                     </a>
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
                             <img src="./images/skill_icon/php.png" alt="HTML5">
                         </div>
                         <div class="skill_info">
                             <h3>PHP</h3>
-                            <p>공통 태그 PHP 연결 가능</p>
+                            <p>php include 명령어를 이용한 공통 페이지 관리를 할 수 있습니다.</p>
                         </div>
                     </a>
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
-                            <img src="./images/skill_icon/jq2.png" alt="HTML5">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/jquery.png" alt="HTML5">
                         </div>
                         <div class="skill_info">
                             <h3>Jquery</h3>
-                            <p>fullPage 기능 구현 가능</p>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
                         </div>
                     </a>
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
-                            <img src="./images/skill_icon/sass1.png" alt="HTML5">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/api.jpg" alt="HTML5">
                         </div>
                         <div class="skill_info">
-                            <h3>Jquery</h3>
-                            <p>제이쿼리</p>
+                            <h3>Api</h3>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
                         </div>
                     </a>
-                    <a href="#" class="swiper-slide" id="skill_001">
-                        <div class="skill_icon">
-                            <img src="./images/skill_icon/api1.jpg" alt="HTML5">
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/figma.png" alt="HTML5">
                         </div>
                         <div class="skill_info">
-                            <h3>API</h3>
-                            <p>채팅 API 구현 가능</p>
+                            <h3>Figma</h3>
+                            <p>피그마를 활용한 와이어프레임, 프로토타입과 피그잼을 활용한 아이디어 기획구조 등을 활용하여 웹디자인을 기획, 제작할 수 있습니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/notion.png" alt="HTML5">
+                        </div>
+                        <div class="skill_info">
+                            <h3>Notion</h3>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/sass.png" alt="HTML5">
+                        </div>
+                        <div class="skill_info">
+                            <h3>Sass</h3>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/photoshop.png" alt="HTML5">
+                        </div>
+                        <div class="skill_info">
+                            <h3>Photoshop</h3>
+                            <p>사진 보정, 합성, 상세페지이, SNS디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/illustrator.png" alt="HTML5">
+                        </div>
+                        <div class="skill_info">
+                            <h3>Illustrator</h3>
+                            <p>간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 백터 디자인을 제작할 수 있습니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/gpt.png" alt="HTML5">
+                        </div>
+                        <div class="skill_info">
+                            <h3>Gpt</h3>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/github.png" alt="HTML5">
+                        </div>
+                        <div class="skill_info">
+                            <h3>Github</h3>
+                            <p>git 명령어를 활용한 gitHub 프로젝트 관리를 진행할 수 있습니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <div class="skill_image">
+                            <img src="./images/skill_icon/html.png" alt="HTML5">
+                        </div>
+                        <div class="skill_info">
+                            <h3>HTML5</h3>
+                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
                         </div>
                     </a>
                 </div>
-                <div class="swiper-button-prev" id="skill_prev">
-                    <img src="./images/left.png" alt="이전">
-                </div>
-                <div class="swiper-button-next" id="skill_next">
-                    <img src="./images/right.png" alt="다음">
-                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
         <div class="section project">
             <div class="portfolio_popup_bg">
                 <div class="portfolio_popup">
                     <div class="video_wrap">
-                        <video src="./videos/Wavve.mp4" autoplay loop muted></video>
-                        <button type="button" id="planBtn">기획 페이지</button>
-                        <button type="button" id="enterBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">사이트 바로가기</button>
+                        <video src="./videos/Gymshark.mp4" autoplay loop muted></video>
                     </div>
-                    <button type="button" id="closeBtn"><img src="./images/close.png" alt="닫기"></button>
+                    <div class="button_wrap">
+                        <div class="info">
+                            <h2><img src="./images/gymshark_logo.png" alt="GYMSHARK"></h2>
+                            <p>SITE<span>해외 스포츠 의류 쇼핑몰 GYMSHARK</span></p>
+                            <p>PROJECT<span>개인 프로젝트</span></p>
+                            <p>PAGE<span>Main / Sub * 3 [모든 반응형 완료]</span></p>
+                            <p>DATE<span>24.01.01 - 제작중</span></p>
+                            <div class="tool">
+                                <img src="./images/skill_icon/html.png" alt="HTML5">
+                                <img src="./images/skill_icon/css.png" alt="">
+                                <img src="./images/skill_icon/javascript.png" alt="">
+                                <img src="./images/skill_icon/php.png" alt="">
+                                <img src="./images/skill_icon/gpt.png" alt="">
+                            </div>
+                        </div>
+                        <button type="button" id="planBtn">포트폴리오 기획서</button>
+                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="closeBtn">닫기</button>
+                    </div>
                 </div>
             </div>
             <div class="portfolio_popup_bg">
                 <div class="portfolio_popup">
                     <div class="video_wrap">
                         <video src="./videos/Wavve.mp4" autoplay loop muted></video>
-                        <button type="button" id="planBtn">기획 페이지</button>
-                        <button type="button" id="enterBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">사이트 바로가기</button>
                     </div>
-                    <button type="button" id="closeBtn"><img src="./images/close.png" alt="닫기"></button>
+                    <div class="button_wrap">
+                        <div class="info">
+                            <h2><img src="./images/wavve_logo.svg" alt="Wavve"></h2>
+                            <p>SITE<span>해외 스포츠 의류 쇼핑몰 GYMSHARK</span></p>
+                            <p>PROJECT<span>개인 프로젝트</span></p>
+                            <p>PAGE<span>Main / Sub * 3 [모든 반응형 완료]</span></p>
+                            <p>DATE<span>24.02.01 - 24.02.28 [672시간]</span></p>
+                            <div class="tool">
+                                <img src="./images/skill_icon/html.png" alt="">
+                                <img src="./images/skill_icon/css.png" alt="">
+                                <img src="./images/skill_icon/javascript.png" alt="">
+                                <img src="./images/skill_icon/php.png" alt="">
+                                <img src="./images/skill_icon/gpt.png" alt="">
+                                <img src="./images/skill_icon/figma.png" alt="">
+                            </div>
+                        </div>
+                        <button type="button" id="planBtn">포트폴리오 기획서</button>
+                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="closeBtn">닫기</button>
+                    </div>
                 </div>
             </div>
             <div class="portfolio_popup_bg">
                 <div class="portfolio_popup">
                     <div class="video_wrap">
                         <video src="./videos/Wavve.mp4" autoplay loop muted></video>
-                        <button type="button" id="planBtn">기획 페이지</button>
-                        <button type="button" id="enterBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">사이트 바로가기</button>
                     </div>
-                    <button type="button" id="closeBtn"><img src="./images/close.png" alt="닫기"></button>
+                    <div class="button_wrap">
+                        <div class="info">
+                            <h2><img src="./images/gymshark_logo.png" alt="GYMSHARK"></h2>
+                            <p>SITE<span>해외 스포츠 의류 쇼핑몰 GYMSHARK</span></p>
+                            <p>PROJECT<span>개인 프로젝트</span></p>
+                            <p>PAGE<span>Main / Sub * 3 [모든 반응형 완료]</span></p>
+                            <p>DATE<span>24.02.01 - 24.02.28 [672시간]</span></p>
+                            <div class="tool">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                            </div>
+                        </div>
+                        <button type="button" id="planBtn">포트폴리오 기획서</button>
+                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="closeBtn">닫기</button>
+                    </div>
                 </div>
             </div>
             <div class="portfolio_popup_bg">
                 <div class="portfolio_popup">
                     <div class="video_wrap">
                         <video src="./videos/Wavve.mp4" autoplay loop muted></video>
-                        <button type="button" id="planBtn">기획 페이지</button>
-                        <button type="button" id="enterBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">사이트 바로가기</button>
                     </div>
-                    <button type="button" id="closeBtn"><img src="./images/close.png" alt="닫기"></button>
+                    <div class="button_wrap">
+                        <div class="info">
+                            <h2><img src="./images/gymshark_logo.png" alt="GYMSHARK"></h2>
+                            <p>SITE<span>해외 스포츠 의류 쇼핑몰 GYMSHARK</span></p>
+                            <p>PROJECT<span>개인 프로젝트</span></p>
+                            <p>PAGE<span>Main / Sub * 3 [모든 반응형 완료]</span></p>
+                            <p>DATE<span>24.02.01 - 24.02.28 [672시간]</span></p>
+                            <div class="tool">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html_2.png" alt="">
+                            </div>
+                        </div>
+                        <button type="button" id="planBtn">포트폴리오 기획서</button>
+                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="closeBtn">닫기</button>
+                    </div>
                 </div>
             </div>
             <div class="portfolio">
                 <a href="#">
                     <h2><img src="./images/gymshark_logo.png" alt="GYMSHARK"></h2>
-                    <div class="info">
-                        <p>
-                            해외 스포츠 의류 쇼핑몰 GYMSHARK 개인 프로젝트<br>
-                            제작 기간 : 23.02.01 - 23.02.28
-                        </p>
-                        <div class="tool">
-                            <p>#html5</p>
-                            <p>#css3</p>
-                            <p>#javascript</p>
-                            <p>#php</p>
-                            <p>#github</p>
-                        </div>
+                    <div class="mockup">
+                        <img src="./images/Wavve_desktop.png" alt="Wavve 데스크탑">
+                        <img src="./images/Wavve_mobile.png" alt="Wavve 모바일">
                     </div>
                 </a>
                 <a href="#">
                     <h2><img src="./images/wavve_logo.svg" alt="Wavve"></h2>
-                    <div class="info">
-                        <p>
-                            OTT 서비스 Wavve를 기반으로 만든 팀 프로젝트<br>
-                            제작 기간 : 23.02.01 - 23.02.28
-                        </p>
-                        <div class="tool">
-                            <p>#html5</p>
-                            <p>#css3</p>
-                            <p>#javascript</p>
-                            <p>#php</p>
-                            <p>#github</p>
-                        </div>
+                    <div class="mockup">
+                        <img src="./images/Wavve_desktop.png" alt="Wavve 데스크탑">
+                        <img src="./images/Wavve_mobile.png" alt="Wavve 모바일">
                     </div>
                 </a>
                 <a href="#">
                     <h2>작업중</h2>
-                    <div class="info">
-                        <p>
-                            OTT 서비스 Wavve를 기반으로 만든 팀 프로젝트<br>
-                            제작 기간 : 23.02.01 - 23.02.28
-                        </p>
-                        <div class="tool">
-                            <p>#html5</p>
-                            <p>#css3</p>
-                            <p>#javascript</p>
-                            <p>#php</p>
-                            <p>#github</p>
-                        </div>
+                    <div class="mockup">
+                        <img src="./images/Wavve_desktop.png" alt="Wavve 데스크탑">
+                        <img src="./images/Wavve_mobile.png" alt="Wavve 모바일">
                     </div>
                 </a>
                 <a href="#">
                     <h2>작업중</h2>
-                    <div class="info">
-                        <p>
-                            OTT 서비스 Wavve를 기반으로 만든 팀 프로젝트<br>
-                            제작 기간 : 23.02.01 - 23.02.28
-                        </p>
-                        <div class="tool">
-                            <p>#html5</p>
-                            <p>#css3</p>
-                            <p>#javascript</p>
-                            <p>#php</p>
-                            <p>#github</p>
-                        </div>
+                    <div class="mockup">
+                        <img src="./images/Wavve_desktop.png" alt="Wavve 데스크탑">
+                        <img src="./images/Wavve_mobile.png" alt="Wavve 모바일">
                     </div>
                 </a>
             </div>
         </div>
         <div class="section contact">
-            <h2>CONTACT</h2>
-            <form action="https://api.web3forms.com/submit" method="POST" id="emailFrm">
-                <input type="hidden" name="access_key" value="a0129262-883a-4f73-9c6c-4c9ef6ffb980">
-                <input type="text" name="name" id="textInput" required placeholder="이름을 입력해주세요">
-                <input type="email" name="email" id="emailInput" required placeholder="이메일 주소를 입력해주세요">
-                <textarea name="message" id="textMessage" required placeholder="텍스트를 입력해주세요"></textarea>
-                <div class="h-captcha" data-captcha="true"></div>
-                <button type="submit" id="submitBtn">전송</button>
-            </form>
+            <div class="contact_wrap">
+                <div class="end">
+                    <h2>CONTACT<span>ME</span></h2>
+                    <p>Thank you for visiting my portfolio.</p>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST" id="emailFrm">
+                    <input type="hidden" name="access_key" value="a0129262-883a-4f73-9c6c-4c9ef6ffb980">
+                    <input type="text" name="name" id="textInput" required placeholder="이름을 입력해주세요">
+                    <input type="email" name="email" id="emailInput" required placeholder="이메일 주소를 입력해주세요">
+                    <textarea name="message" id="textMessage" required placeholder="텍스트를 입력해주세요"></textarea>
+                    <div class="h-captcha" data-captcha="true"></div>
+                    <button type="submit" id="submitBtn">전송</button>
+                </form>
+            </div>
         </div>
     </main>
-    <footer></footer>
-    <script src="./script/jquery.fullPage.js"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="./script/jquery.fullPage.js"></script>
     <script src="./script/index.js"></script>
 </body>
 </html>

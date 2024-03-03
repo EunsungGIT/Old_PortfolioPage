@@ -6,24 +6,46 @@ $('main').fullpage({
     navigation: true,
     slidesNavigation: true,
     afterLoad:function(anchor, index){
-        if(anchor == 'about'){//앵커의 위치가 b와 같으면
-            if (anchor == 'about') { // 앵커의 위치가 about일 때
-                $('.about_wrap .photo').animate({
-                    opacity: 1
-                }, 1000);
-                $('.about_wrap .info').delay(500).animate({
+        if (anchor == 'about') {
+            $('.about .planet').animate({
+                opacity: 1,
+                right:0,
+            }, 3000);
+            $('.about_wrap .photo').delay(500).animate({
+                opacity: 1,
+                top:20,
+            }, 1000);
+            $('.about_wrap .info').delay(1000).animate({
+                opacity: 1,
+                top:60,
+            }, 1000);
+            $('.about_wrap .career').delay(1500).animate({
+                opacity: 1,
+                top:60,
+            }, 1000);
+            $('.about_wrap .github').delay(2000).animate({
+                opacity: 1,
+                top:60,
+            }, 1000);
+        }
+        if (anchor == 'skill') {
+            $('.skill h2').animate({
+                opacity: 1,
+            }, 1000);
+            $('.skill_wrap a').each(function(index) {
+                $(this).delay(500 * index).animate({
                     opacity: 1,
-                    top:60,
+                    top: 20,
                 }, 1000);
-                $('.about_wrap .career').delay(1000).animate({
-                    opacity: 1,
-                    top:60,
-                }, 1000);
-                $('.about_wrap .github').delay(1500).animate({
-                    opacity: 1,
-                    top:60,
-                }, 1000);
-            }
+            });
+        }
+        if (anchor == 'contact') {
+            $('.contact .end').animate({
+                opacity: 1,
+            }, 1000);
+            $('.contact #emailFrm').delay(500).animate({
+                opacity: 1,
+            }, 1000);
         }
     }
 })
@@ -74,24 +96,30 @@ mouseBtn.addEventListener('click',()=>{
 })
 
 /* skill */
-let swiper = new Swiper('#swiper_skill',{
-    autoplay:{delay:1000,},
+/* var swiper = new Swiper(".swiper_skill", {
+    effect: "coverflow",
     loop:true,
-    slidesPerView:4,
-    spaceBetween:20,
-    navigation:{
-        nextEl:'#skill_prev',
-        prevEl:'#skill_next'
-    }
-})
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    },
+}); */
 
 /* project */
 const portfolio = document.querySelectorAll('.portfolio a')
 const project = document.querySelector('.project')
 const portfolio_popup_bg = document.querySelectorAll('.portfolio_popup_bg')
 const closeBtn = document.querySelectorAll('#closeBtn')
-const info = document.querySelectorAll('.portfolio .info')
-const portfolio_h2 = document.querySelectorAll('.portfolio h2')
+const mockup = document.querySelectorAll('.portfolio .mockup')
 
 portfolio[0].addEventListener('mouseenter',()=>{
     project.style.backgroundImage = 'url(../images/gymshark.avif)'
@@ -107,22 +135,22 @@ portfolio[3].addEventListener('mouseenter',()=>{
 })
 
 portfolio.forEach((t,i)=>{
-    info[i].style.opacity = '0'
+    mockup[i].style.opacity = '0'
     portfolio_popup_bg[i].style.opacity = '0'
     portfolio_popup_bg[i].style.display = 'none'
     t.addEventListener('mouseenter',()=>{
-        portfolio_h2[i].style.transform = 'translateY(-20px)'
-        info[i].classList.add('show')
-        info[i].classList.remove('hide')
+        mockup[i].classList.add('show')
+        mockup[i].classList.remove('hide')
     })
     t.addEventListener('mouseleave',()=>{
-        portfolio_h2[i].style.transform = 'translateY(0)'
-        info[i].classList.add('hide')
-        info[i].classList.remove('show')
+        mockup[i].classList.add('hide')
+        mockup[i].classList.remove('show')
     })
     t.addEventListener('click',()=>{
-        portfolio_popup_bg[i].style.opacity = '1'
         portfolio_popup_bg[i].style.display = 'flex'
+        setTimeout(() => {
+            portfolio_popup_bg[i].style.opacity = '1';
+        }, 100);
     })
     closeBtn[i].addEventListener('click', () => {
         portfolio_popup_bg[i].style.opacity = '0';

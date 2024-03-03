@@ -1,9 +1,28 @@
-@media screen and (max-width:1024px){
-    main .project .portfolio {
-        flex-flow: column nowrap;
+@media screen and (max-width:1240px){
+    main .skill .skill_wrap a {
+        width: calc(100% / 2 - 10px);
+        height: 80px;
     }
-    main .project .portfolio a {
-        width: 100%; height: 20%;
-        border-bottom: 1px solid #aaa;
+}
+@media screen and (max-width:1024px){
+    main .main .introduce h2 {
+        font-size: 1.5rem;
+    }
+    main .main .introduce p {
+        font-size: 0.875rem;
+    }
+}
+@media screen and (max-width:768px){
+    main .main .introduce {
+        padding: 0 20px;
+    }
+    main .main .introduce h2 {
+        font-size: 1rem;
+    }
+    main .main .introduce p {
+        font-size: 0.75rem;
+    }
+    main .main #mouse {
+        display: none;
     }
 }
