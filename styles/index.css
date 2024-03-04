@@ -4,6 +4,9 @@
 body * {
     cursor: none;
 }
+body {
+    min-width: 1600px;
+}
 .mouse {
     background: url(../images/star.png) no-repeat center center;
     background-size: cover;
@@ -49,6 +52,7 @@ main .main .introduce h2 {
     text-align: center; margin-bottom: 60px;
     color: #fff; font-size: 3rem;
     font-weight: 700; opacity: 0;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
 }
 main .main .introduce p {
     opacity: 0; margin-bottom: 20px;
