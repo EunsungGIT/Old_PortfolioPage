@@ -134,7 +134,7 @@
                         </div>
                         <div class="skill_info">
                             <h3>Jquery</h3>
-                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
+                            <p>Javascript의 라이브러리로 좀 더 쉽게 사용할 수 있습니다.</p>
                         </div>
                     </a>
                     <a href="#" class="swiper-slide">
@@ -143,7 +143,7 @@
                         </div>
                         <div class="skill_info">
                             <h3>Api</h3>
-                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
+                            <p>메일, 지도, 채팅 등 다양한 API를 구현할 수 있습니다.</p>
                         </div>
                     </a>
                     <a href="#" class="swiper-slide">
@@ -170,7 +170,7 @@
                         </div>
                         <div class="skill_info">
                             <h3>Sass</h3>
-                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
+                            <p>css를 좀 더 쉽고 간결하게 정리할 수 있습니다.</p>
                         </div>
                     </a>
                     <a href="#" class="swiper-slide">
@@ -179,12 +179,12 @@
                         </div>
                         <div class="skill_info">
                             <h3>Photoshop</h3>
-                            <p>사진 보정, 합성, 상세페지이, SNS디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.</p>
+                            <p>사진 보정, 합성, 상세페이지, SNS디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.</p>
                         </div>
                     </a>
                     <a href="#" class="swiper-slide">
                         <div class="skill_image">
-                            <img src="./images/skill_icon/illustrator.png" alt="HTML5">
+                            <img src="./images/skill_icon/illustrator.png" alt="illustrator">
                         </div>
                         <div class="skill_info">
                             <h3>Illustrator</h3>
@@ -193,16 +193,16 @@
                     </a>
                     <a href="#" class="swiper-slide">
                         <div class="skill_image">
-                            <img src="./images/skill_icon/gpt.png" alt="HTML5">
+                            <img src="./images/skill_icon/gpt.png" alt="gpt">
                         </div>
                         <div class="skill_info">
                             <h3>Gpt</h3>
-                            <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
+                            <p>Chatgpt API를 이용한 채팅 AI를 구현할 수 있습니다.</p>
                         </div>
                     </a>
                     <a href="#" class="swiper-slide">
                         <div class="skill_image">
-                            <img src="./images/skill_icon/github.png" alt="HTML5">
+                            <img src="./images/skill_icon/github.png" alt="github">
                         </div>
                         <div class="skill_info">
                             <h3>Github</h3>
@@ -211,10 +211,10 @@
                     </a>
                     <a href="#" class="swiper-slide">
                         <div class="skill_image">
-                            <img src="./images/skill_icon/html.png" alt="HTML5">
+                            <img src="./images/skill_icon/git.png" alt="git">
                         </div>
                         <div class="skill_info">
-                            <h3>HTML5</h3>
+                            <h3>GIT</h3>
                             <p>유효성 문제없이 HTML5 웹 점근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성 할 수 있습니다.</p>
                         </div>
                     </a>
@@ -244,7 +244,7 @@
                             </div>
                         </div>
                         <button type="button" id="planBtn">포트폴리오 기획서</button>
-                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="siteBtn">프로젝트 결과</button>
                         <button type="button" id="closeBtn">닫기</button>
                     </div>
                 </div>
@@ -270,8 +270,8 @@
                                 <img src="./images/skill_icon/figma.png" alt="">
                             </div>
                         </div>
-                        <button type="button" id="planBtn">포트폴리오 기획서</button>
-                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="planBtn" onclick="openLink('https://www.figma.com/proto/d97P1f5xxpEmgM6TqXLsxs/2%EC%A1%B0-Wavve-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?page-id=0%3A1&type=design&node-id=373-642&viewport=-4822%2C2692%2C0.12&t=amv1XkZu5Nex2dlY-1&scaling=min-zoom&mode=design')">포트폴리오 기획서</button>
+                        <button type="button" id="siteBtn" onclick="openLink('https://yunaweb.pe.kr/wave_frontend24/#')">프로젝트 결과</button>
                         <button type="button" id="closeBtn">닫기</button>
                     </div>
                 </div>
@@ -279,26 +279,21 @@
             <div class="portfolio_popup_bg">
                 <div class="portfolio_popup">
                     <div class="video_wrap">
-                        <video src="./videos/Wavve.mp4" autoplay loop muted></video>
+                        <video src="./videos/Updating.mp4" autoplay loop muted></video>
                     </div>
                     <div class="button_wrap">
                         <div class="info">
-                            <h2><img src="./images/gymshark_logo.png" alt="GYMSHARK"></h2>
-                            <p>SITE<span>해외 스포츠 의류 쇼핑몰 GYMSHARK</span></p>
-                            <p>PROJECT<span>개인 프로젝트</span></p>
-                            <p>PAGE<span>Main / Sub * 3 [모든 반응형 완료]</span></p>
-                            <p>DATE<span>24.02.01 - 24.02.28 [672시간]</span></p>
+                            <h2><img src="./images/updating_logo.png" alt="#"></h2>
+                            <p>SITE<span>작업중</span></p>
+                            <p>PROJECT<span>작업중</span></p>
+                            <p>PAGE<span>작업중</span></p>
+                            <p>DATE<span>작업중</span></p>
                             <div class="tool">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html.png" alt="">
                             </div>
                         </div>
                         <button type="button" id="planBtn">포트폴리오 기획서</button>
-                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="siteBtn">프로젝트 결과</button>
                         <button type="button" id="closeBtn">닫기</button>
                     </div>
                 </div>
@@ -306,26 +301,21 @@
             <div class="portfolio_popup_bg">
                 <div class="portfolio_popup">
                     <div class="video_wrap">
-                        <video src="./videos/Wavve.mp4" autoplay loop muted></video>
+                        <video src="./videos/Updating.mp4" autoplay loop muted></video>
                     </div>
                     <div class="button_wrap">
                         <div class="info">
-                            <h2><img src="./images/gymshark_logo.png" alt="GYMSHARK"></h2>
-                            <p>SITE<span>해외 스포츠 의류 쇼핑몰 GYMSHARK</span></p>
-                            <p>PROJECT<span>개인 프로젝트</span></p>
-                            <p>PAGE<span>Main / Sub * 3 [모든 반응형 완료]</span></p>
-                            <p>DATE<span>24.02.01 - 24.02.28 [672시간]</span></p>
+                            <h2><img src="./images/updating_logo.png" alt="#"></h2>
+                            <p>SITE<span>작업중</span></p>
+                            <p>PROJECT<span>작업중</span></p>
+                            <p>PAGE<span>작업중</span></p>
+                            <p>DATE<span>작업중</span></p>
                             <div class="tool">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
-                                <img src="./images/skill_icon/html_2.png" alt="">
+                                <img src="./images/skill_icon/html.png" alt="">
                             </div>
                         </div>
                         <button type="button" id="planBtn">포트폴리오 기획서</button>
-                        <button type="button" id="siteBtn" onclick="location.href = 'https://yunaweb.pe.kr/wave_frontend24/#'">프로젝트 결과</button>
+                        <button type="button" id="siteBtn">프로젝트 결과</button>
                         <button type="button" id="closeBtn">닫기</button>
                     </div>
                 </div>
@@ -334,8 +324,8 @@
                 <a href="#">
                     <h2><img src="./images/gymshark_logo.png" alt="GYMSHARK"></h2>
                     <div class="mockup">
-                        <img src="./images/Wavve_desktop.png" alt="Wavve 데스크탑">
-                        <img src="./images/Wavve_mobile.png" alt="Wavve 모바일">
+                        <img src="./images/updating_desktop.png" alt="Wavve 데스크탑">
+                        <img src="./images/updating_mobile.png" alt="Wavve 모바일">
                     </div>
                 </a>
                 <a href="#">
@@ -348,15 +338,15 @@
                 <a href="#">
                     <h2>작업중</h2>
                     <div class="mockup">
-                        <img src="./images/Wavve_desktop.png" alt="Wavve 데스크탑">
-                        <img src="./images/Wavve_mobile.png" alt="Wavve 모바일">
+                        <img src="./images/updating_desktop.png" alt="Wavve 데스크탑">
+                        <img src="./images/updating_mobile.png" alt="Wavve 모바일">
                     </div>
                 </a>
                 <a href="#">
                     <h2>작업중</h2>
                     <div class="mockup">
-                        <img src="./images/Wavve_desktop.png" alt="Wavve 데스크탑">
-                        <img src="./images/Wavve_mobile.png" alt="Wavve 모바일">
+                        <img src="./images/updating_desktop.png" alt="Wavve 데스크탑">
+                        <img src="./images/updating_mobile.png" alt="Wavve 모바일">
                     </div>
                 </a>
             </div>
@@ -366,13 +356,15 @@
                 <div class="end">
                     <h2>CONTACT<span>ME</span></h2>
                     <p>Thank you for visiting my portfolio.</p>
+                    <div class="kakao">
+                        <img src="./images/kakao.png" alt="카카오 코드">
+                    </div>
                 </div>
                 <form action="https://api.web3forms.com/submit" method="POST" id="emailFrm">
                     <input type="hidden" name="access_key" value="a0129262-883a-4f73-9c6c-4c9ef6ffb980">
                     <input type="text" name="name" id="textInput" required placeholder="이름을 입력해주세요">
                     <input type="email" name="email" id="emailInput" required placeholder="이메일 주소를 입력해주세요">
                     <textarea name="message" id="textMessage" required placeholder="텍스트를 입력해주세요"></textarea>
-                    <div class="h-captcha" data-captcha="true"></div>
                     <button type="submit" id="submitBtn">전송</button>
                 </form>
             </div>

@@ -3,6 +3,9 @@
         width: calc(100% / 2 - 10px);
         height: 80px;
     }
+    main .skill .skill_wrap a .skill_image img {
+        width: 50px;
+    }
 }
 @media screen and (max-width:1024px){
     main .main .introduce h2 {

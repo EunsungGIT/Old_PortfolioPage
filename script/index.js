@@ -33,7 +33,7 @@ $('main').fullpage({
                 opacity: 1,
             }, 1000);
             $('.skill_wrap a').each(function(index) {
-                $(this).delay(500 * index).animate({
+                $(this).delay(200 * index).animate({
                     opacity: 1,
                     top: 20,
                 }, 1000);
@@ -96,23 +96,6 @@ mouseBtn.addEventListener('click',()=>{
 })
 
 /* skill */
-/* var swiper = new Swiper(".swiper_skill", {
-    effect: "coverflow",
-    loop:true,
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-    },
-    pagination: {
-    el: ".swiper-pagination",
-    },
-}); */
 
 /* project */
 const portfolio = document.querySelectorAll('.portfolio a')
@@ -120,6 +103,8 @@ const project = document.querySelector('.project')
 const portfolio_popup_bg = document.querySelectorAll('.portfolio_popup_bg')
 const closeBtn = document.querySelectorAll('#closeBtn')
 const mockup = document.querySelectorAll('.portfolio .mockup')
+const siteBtn = document.querySelectorAll('.portfolio_popup #siteBtn')
+console.log(siteBtn)
 
 portfolio[0].addEventListener('mouseenter',()=>{
     project.style.backgroundImage = 'url(../images/gymshark.avif)'
@@ -133,6 +118,10 @@ portfolio[2].addEventListener('mouseenter',()=>{
 portfolio[3].addEventListener('mouseenter',()=>{
     project.style.backgroundImage = 'url(../images/none.avif)'
 })
+
+function openLink(url) {
+    window.open(url, '_blank');
+}
 
 portfolio.forEach((t,i)=>{
     mockup[i].style.opacity = '0'

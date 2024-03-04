@@ -47,8 +47,11 @@ main .main #mouse {
     transform: translateX(-50%);
     animation: mouse 1.5s ease-in-out infinite;
 }
+main .main #mouse:hover img {
+    transform: scale(1.2);
+}
 main .main #mouse img {
-    width: 100%;
+    width: 100%; transition: 0.5s;
 }
 /* about */
 main .about {
@@ -182,12 +185,14 @@ main .skill .skill_wrap {
 main .skill .skill_wrap a {
     width: calc(100% / 4 - 10px);
     border: 1px solid #aaa; display: flex;
-    padding: 20px; justify-content: space-around;
+    padding: 0 30px; justify-content: space-around;
     align-items: center; height: 150px;
     border-radius: 10px; margin: 5px; opacity: 0;
     position: relative;
 }
-main .skill .skill_wrap a .skill_image {}
+main .skill .skill_wrap a .skill_image {
+    margin-right: 20px;
+}
 main .skill .skill_wrap a:nth-of-type(9) .skill_image,
 main .skill .skill_wrap a:nth-of-type(13) .skill_image,
 main .skill .skill_wrap a:nth-of-type(14) .skill_image {
@@ -197,7 +202,7 @@ main .skill .skill_wrap a .skill_image img {
     width: 100px; border-radius: 10px;
 }
 main .skill .skill_wrap a .skill_info {
-    width: 50%;
+    width: 100%;
 }
 main .skill .skill_wrap a .skill_info h3 {
     color: #fff; font-weight: 700;
@@ -208,7 +213,7 @@ main .skill .skill_wrap a .skill_info p {
 }
 /* project */
 main .project {
-    background-image: url(../images/gymshark.avif);
+    background-image: url(../images/project_background.png);
     background-size: cover; transition: 0.5s;
     position: relative;
 }
@@ -239,7 +244,7 @@ main .project .portfolio_popup_bg .portfolio_popup .video_wrap img:nth-of-type(2
 }
 main .project .portfolio_popup_bg .portfolio_popup .button_wrap {
     display: flex; flex-flow: column nowrap;
-    margin-left: 40px;
+    margin-left: 40px; width: 30%;
 }
 main .project .portfolio_popup_bg .portfolio_popup .button_wrap .info {}
 main .project .portfolio_popup_bg .portfolio_popup .button_wrap .info p {
@@ -340,6 +345,13 @@ main .contact .contact_wrap .end h2 {
 main .contact .contact_wrap .end p {
     color: #fff; margin-top: 20px;
 }
+main .contact .contact_wrap .end .kakao {
+    margin-top: 20px;
+    width: 200px; border-radius: 10px;
+}
+main .contact .contact_wrap .end .kakao img {
+    width: 100%; border-radius: 10px;
+}
 main .contact .contact_wrap h2 span {
     color: #5774C0; font-weight: 700;
     font-family: "Noto Serif", serif;
@@ -367,9 +379,6 @@ main .contact .contact_wrap #emailFrm #textMessage {
     color: #aaa; margin-bottom: 10px;
     border-radius: 10px; padding: 20px;
     width: 100%; border: 1px solid #aaa;
-}
-main .contact .contact_wrap #emailFrm .h-captcha {
-    margin-bottom: 10px;
 }
 main .contact .contact_wrap #emailFrm #submitBtn {
     color: #fff; width: 300px;
