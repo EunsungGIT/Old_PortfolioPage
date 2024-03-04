@@ -11,21 +11,24 @@ $('main').fullpage({
                 opacity: 1,
                 right:0,
             }, 3000);
+            $('.about .banner').animate({
+                opacity: 1,
+            }, 3000);
             $('.about_wrap .photo').delay(500).animate({
                 opacity: 1,
-                top:20,
+                top:40,
             }, 1000);
             $('.about_wrap .info').delay(1000).animate({
                 opacity: 1,
-                top:60,
+                top:80,
             }, 1000);
             $('.about_wrap .career').delay(1500).animate({
                 opacity: 1,
-                top:60,
+                top:80,
             }, 1000);
             $('.about_wrap .github').delay(2000).animate({
                 opacity: 1,
-                top:60,
+                top:80,
             }, 1000);
         }
         if (anchor == 'skill') {
@@ -48,6 +51,14 @@ $('main').fullpage({
             }, 1000);
         }
     }
+})
+
+/* 마우스 */
+const mouse = document.querySelector('.mouse')
+
+window.addEventListener('mousemove',(e)=>{
+    mouse.style.left = `${e.clientX}px`
+    mouse.style.top = `${e.clientY}px`
 })
 
 /* header */
